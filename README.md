@@ -85,3 +85,6 @@ If any problem still persists repeat Steps 1-5, and hit me up
 and the images required are hidden for proper functioning of the program in case you want to modify,
 you have my permission to change the code and use it as per your wish
 
+Future Plans:
+
+To record the classes I dont have any ideas currently if you have please do share it with me
