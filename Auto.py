@@ -32,7 +32,8 @@ try:
     import openpyxl
     from PIL import Image
 except ModuleNotFoundError as err:
-    print("not installed modules please go through the read me files")
+    print("not installed modules please go through the read me files, pressanything to exit")
+    input()
 #enabling mouse fail safe
 pyautogui.FAILSAFE = True
 
