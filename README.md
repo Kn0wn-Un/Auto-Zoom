@@ -4,7 +4,9 @@ based on the given input in the Excel sheet List.xlsx
 the input should be in the given format:
 
 Time : dd-mm-yyyy hh:mm AM/PM
+
 Meeting ID : 123456123 (string)
+
 Meeting Password : 1234 (string)
 
 IMP - If you want to change the program path jump to line 40
@@ -17,15 +19,20 @@ please make sure to test it before executing
 Modules used:
 
 pyautogui - https://pyautogui.readthedocs.io/en/latest/
+
 openpyxl - https://openpyxl.readthedocs.io/en/stable/
+
 PIL - https://pillow.readthedocs.io/en/stable/
 
 
 Pre-Requirements:
 
 Windows machine
+
 Zoom app
+
 Web browser (chrome, firefox preferred ,make sure it has pop-up enabled to open zoom app)
+
 Python - Download and install from https://www.python.org/downloads/
 
 Steps:
