@@ -32,7 +32,7 @@ try:
     import openpyxl
     from PIL import Image
 except ModuleNotFoundError as err:
-    print("not installed modules please go through the read me files, pressanything to exit")
+    print("not installed modules please go through the read me files, press anything to exit")
     input()
 #enabling mouse fail safe
 pyautogui.FAILSAFE = True
@@ -96,8 +96,8 @@ def manualjoin(id, password = ""):
 def linkjoin(link):
     #open the given link in web browser
     webbrowser.open(link)
-
-    time.sleep(5)
+    start = time.time()
+    time.sleep(3)
     while True:
         var = pyautogui.locateOnScreen('openlink.png', confidence=0.9)
         if var != None:
@@ -107,10 +107,10 @@ def linkjoin(link):
         if var != None:
             pyautogui.click(var)
             break
-        elif (time.time() - cur) >= 120:
+        elif (time.time() - start) >= 120:
             print("link " + link + " not opened")
             break
-        time.sleep(5)
+        time.sleep(3)
     return
 
 
@@ -124,11 +124,12 @@ for i in range(len(meetings)):
 
     #join a minute early for later scheduled class
     if(cur < temp - 60):
+        print("next class in ", end ="")
         print(datetime.timedelta(seconds = (temp - cur) - 60))
         time.sleep(temp - cur - 60)
     #if more than 5 minutes have passed already
     elif (cur - temp) > 300:
-        print("skipped meeting " + str(i))
+        print("skipped meeting " + str(i + 1))
         continue
         
     var = os.system("taskkill /f /im Zoom.exe")
@@ -138,7 +139,7 @@ for i in range(len(meetings)):
     if curmeeting[1] != None:
         linkjoin(str(curmeeting[1]))
     #check if 
-    elif curmeeting[2] != None:
+    if curmeeting[2] != None:
         subfolders = [ f.path for f in os.scandir("C:\\Users") if f.is_dir() ]
         #opening the zoom app, if you are running on a different OS or the path is different
         #change the path here 
@@ -178,3 +179,4 @@ for i in range(len(meetings)):
 #program has finished all classes and exits
 print("Done, press anything to exit")
 input()
+var = os.system("taskkill /f /im Zoom.exe")
