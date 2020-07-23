@@ -120,7 +120,7 @@ for i in range(len(meetings)):
 
     #Setting the meeting Times
     cur = round(time.time(), 0)
-    temp = curmeeting[0].timestamp()
+    temp = datetime.datetime.timestamp(datetime.datetime.strptime(curmeeting[0], "%d-%m-%Y %I:%M %p"))
 
     #join a minute early for later scheduled class
     if(cur < temp - 60):
