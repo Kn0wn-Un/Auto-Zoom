@@ -55,7 +55,7 @@ enter the schedule of the day in the excel sheet
 	Meeting ID : 123456123 (string)(not required if meeting link is provided)
 	Meeting Password : 1234 (string)(not required if meeting link is provided)
 
-Warning : dont fk this up like your life
+Warning : please enter as given
 
 3) make sure to close all windows and free up the desktop
 (my program runs on Image Recognition :D )
@@ -64,7 +64,7 @@ Warning : dont fk this up like your life
 	
 4) Do not close the command prompt thats where the program is running 
 	and any errors show up
-5) Go back to jacking off JK keep an eye out in case of errors and failures
+5) keep an eye out in case of errors and failures
 	I am not responsible for any troubles caused to you
 	if the program does not function as intended, or if it is misused,
 	please make sure to test it before executing
