@@ -45,6 +45,8 @@ Steps:
 	(let it install)
 	pip install Pillow==7.1.1
 	(let it install)
+	pip install opencv-python
+	(let it install)
 
 
 2) open List.xlsx

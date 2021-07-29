@@ -120,16 +120,16 @@ for i in range(len(meetings)):
 
     #Setting the meeting Times
     cur = round(time.time(), 0)
-    temp = curmeeting[0].timestamp()
+    temp = datetime.datetime.strptime(curmeeting[0], "%d-%m-%Y %H:%M %p").timestamp()
 
-    #join a minute early for later scheduled class
+    #join a minute early for later scheduled meeting
     if(cur < temp - 60):
-        print("next class in ", end ="")
+        print("next meeting in ", end ="")
         print(datetime.timedelta(seconds = (temp - cur) - 60))
         time.sleep(temp - cur - 60)
     #if more than 5 minutes have passed already
     elif (cur - temp) > 300:
-        print("skipped meeting " + str(i + 1))
+        print("skipped meeting " + str(i + 1) + "since more than 5 minutes have passed since this meeting began")
         continue
         
     var = os.system("taskkill /f /im Zoom.exe")
